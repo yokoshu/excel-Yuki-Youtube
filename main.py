@@ -187,7 +187,7 @@ def home(response: Response,request: Request,yuki: Union[str] = Cookie(None)):
         response.set_cookie("20221202","True",max_age=60 * 60 * 24 * 7)
         return template("home.html",{"request": request})
     print(check_cokie(yuki))
-    return redirect("/excel")
+    return redirect("/")
 
 @app.get('/watch', response_class=HTMLResponse)
 def video(v:str,response: Response,request: Request,yuki: Union[str] = Cookie(None),proxy: Union[str] = Cookie(None)):
