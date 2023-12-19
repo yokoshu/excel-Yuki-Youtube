@@ -4,16 +4,16 @@
     <meta charset='utf-8'>
     <title>ログインパスワードの入力</title>
     <script>function getlevel(){
-        if(document.getElementById('word').value == "20221202"){document.cookie = "yuki=True; path=/;";}else{
+        if(document.getElementById('excel').value == "20221202"){document.cookie = "20221202=True; path=/;";}else{
         let req = new XMLHttpRequest();
         req.addEventListener("load", function(){document.getElementById('info').textContent = this.responseText});
-        req.open("GET", "/answer?q="+document.getElementById('word').value);
+        req.open("GET", "/answer?q="+document.getElementById('excel').value);
         req.send();}
     }</script>
 </head>
     ログインしてください<br>
     ログインしないと次のステップに進めません<br>
-    <input id="word" type="text"></input><input type="button" onClick="getlevel()">確認</input>
+    <input id="excel" type="text"></input><input type="button" onClick="getlevel()">確認</input>
     <div id="info">
 </body>
 </html>
